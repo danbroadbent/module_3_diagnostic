@@ -1,1 +1,14 @@
-<%= @results %>
+<h1>Nearest 10 Stations:</h1>
+<ul>
+  <% @results['fuel_stations'].each do |station| %>
+  <li>
+    <p>
+    Name: <%= station["station_name"] %></ br>
+    Address: <%= station["street_address"] %>, <%= station["city"] %> <%= station["state"] %> <%= station["zip"] %></ br>
+    Fuel Types: <%= station["fuel_type_code"] %></ br>
+    Distance: <%= station["distance"] %> Miles</ br>
+    Access Times: <%= station["access_days_time"] %></ br>
+    <% end %>
+    </p>
+  </li>
+</ul>
