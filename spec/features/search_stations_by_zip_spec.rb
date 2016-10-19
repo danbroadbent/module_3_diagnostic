@@ -1,8 +1,8 @@
 describe "logged in user visits root", :type => :feature do
   it 'visits root' do
-    create(:user)
-    visits '/'
-    fill_in(search), with: '80203'
+    # create(:user)
+    visit '/'
+    # fill_in(search), with: '80203',
     click_link 'locate'
     expect(current_path).to eq('/search')
     # expect(params).to eq("?")
